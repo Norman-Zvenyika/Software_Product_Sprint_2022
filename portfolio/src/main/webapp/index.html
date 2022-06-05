@@ -4,16 +4,73 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <!-- General outline-->
+    <div class="grid-container">
+        <!-- Header Area-->
+        <div class="header">
+            <div class="navbar">
+                <div><a href="index.html" class="">Home</a></div>
+                <div><a href="about.html" class="">About</a></div>
+                <div><a href="projects.html" class="">Projects</a></div>
+                <div><a href="contact.html" class="">Contact</a></div>
+            </div>
+        </div>
+        <!-- Aside Bar Area-->
+        <div class="aside">
+            <div class="author-img"><img src="images/Norman's avatar.jpg"></div>
+            <div class="about-desc">
+                <div>
+                    <h2>Norman Zvenyika</h2>
+                </div>
+                <div>Computer Science and Bioengineering </div>
+                <div>Lehigh University</div>
+                <button type="button" class="resumeIcon"><a href="https://drive.google.com/file/d/133fGz68dJJkSEa7UjNZqmI20CrOUkQgj/view?usp=sharing"> 
+                    Click to download my resume</a>
+                    <i class="fa fa-file-pdf-o"></i></button>
+            </div>
+        </div>
+        <!-- Main Content Area -->
+        <div class="main">
+            <button type="button" class="collapsibleTitle">Biography</button>
+            <div class="blogContent">
+                <p>Norman Zvenyika is a Computer Science and Bioengineering major at Lehigh University. Since his childhood, 
+                Norman always admires and appreciates the concept of equitable 
+                health and safety for everyone. To learn more about him,
+                <a href="contact.html">click here.</a>
+                </p>
+            </div>
+            <button type="button" class="collapsibleTitle">Current Projects</button>
+            <div class="blogContent">
+                <p> Currently, I'm conducting a Bionformatics research in the development of sea-urchins. To learn more about this project, 
+                    <a href="contact.html">click here.</a>
+                </p>
+            </div>
+            <button type="button" class="collapsibleTitle">Contact</button>
+            <div class="blogContent">
+                <p>You want us to connect?
+                <a href="contact.html">Click here</a>
+                </p>
+            </div>
+        </div>
+        <!-- Footer Area -->
+        <div class="footer">
+            <div>
+                <div>Connect with me!</div>
+                <div>
+                    <a href="https://www.linkedin.com/in/norman-zvenyika"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/norman-zvenyika"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+    <!-- End of main content -->
+    <script src="script.js"></script>
+</body>
+
 </html>
