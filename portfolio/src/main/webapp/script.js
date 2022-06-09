@@ -41,7 +41,11 @@ async function getQuote() {
     quotesContainer.innerText = randomQuote;
   }
 
-function randomQuoteGenerator(quotes) {
+/**
+ * for generating a random quote
+ * @param {*} quotes is the object with quotes
+ */
+  function randomQuoteGenerator(quotes) {
     const max = 2;
     const min = 0;
     const i = Math.floor(Math.random()*(max-min+1)+min); //random number between 0 and 2
