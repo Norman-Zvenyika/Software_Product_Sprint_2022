@@ -35,7 +35,16 @@ for (i = 0; i < coll.length; i++) {
  */
 async function getQuote() {
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
+    const arrayQuotes = await responseFromServer.json();
+    const randomQuote = randomQuoteGenerator(arrayQuotes)  //get a random quote
     const quotesContainer = document.getElementById('quotes');
-    quotesContainer.innerText = textFromResponse;
+    quotesContainer.innerText = randomQuote;
   }
+
+function randomQuoteGenerator(quotes) {
+    const max = 2;
+    const min = 0;
+    const i = Math.floor(Math.random()*(max-min+1)+min); //random number between 0 and 2
+    const randomQuote = quotes[i];
+    return randomQuote;
+}
