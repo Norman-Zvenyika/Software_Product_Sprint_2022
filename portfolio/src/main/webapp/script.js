@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Collapsible Buttons.
  */
 var coll = document.getElementsByClassName("collapsibleTitle");
 var i;
