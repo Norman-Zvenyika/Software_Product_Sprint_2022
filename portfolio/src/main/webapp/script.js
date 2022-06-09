@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Collapsible Buttons.
  */
 var coll = document.getElementsByClassName("collapsibleTitle");
 var i;
@@ -27,4 +27,28 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+}
+
+/**
+ * Random quotes generator
+ * Prints out the random quotes
+ */
+async function getQuote() {
+    const responseFromServer = await fetch('/hello');
+    const arrayQuotes = await responseFromServer.json();
+    const randomQuote = randomQuoteGenerator(arrayQuotes)  //get a random quote
+    const quotesContainer = document.getElementById('quotes');
+    quotesContainer.innerText = randomQuote;
+  }
+
+/**
+ * for generating a random quote
+ * @param {*} quotes is the object with quotes
+ */
+  function randomQuoteGenerator(quotes) {
+    const max = 2;
+    const min = 0;
+    const i = Math.floor(Math.random()*(max-min+1)+min); //random number between 0 and 2
+    const randomQuote = quotes[i];
+    return randomQuote;
 }
