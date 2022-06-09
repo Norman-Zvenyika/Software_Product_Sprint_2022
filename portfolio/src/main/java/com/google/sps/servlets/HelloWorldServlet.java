@@ -13,6 +13,6 @@ public class HelloWorldServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html;");
-    response.getWriter().println("<p>\"Education is the most powerful weapon that you can use to change the world\" ~ Nelson Mandela</p>");
+    response.getWriter().println("\"Education is the most powerful weapon that you can use to change the world\" ~ Nelson Mandela");
   }
 }
