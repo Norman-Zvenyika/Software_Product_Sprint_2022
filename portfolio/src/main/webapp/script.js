@@ -28,3 +28,14 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+/**
+ * Random quotes generator
+ * Prints out the random quotes
+ */
+async function getQuote() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+    const quotesContainer = document.getElementById('quotes');
+    quotesContainer.innerText = textFromResponse;
+  }
