@@ -12,14 +12,14 @@
     <div class="grid-container">
         <div class="header">
             <div class="navbar">
-                <div><a href="home.html" class="">Home</a></div>
+                <div><a href="index.html" class="">Home</a></div>
                 <div><a href="about.html" class="">About</a></div>
                 <div><a href="projects.html" class="">Projects</a></div>
                 <div><a href="contact.html" class="">Contact</a></div>
             </div>
         </div>
         <div class="container">
-            <form action="/action_page.php">
+            <form action="/form-handler" method="POST">
                 <label for="fname">First Name<span class="required">*</span></label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
             
@@ -27,7 +27,7 @@
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
             
                 <label for="email">Email<span class="required">*</span></label>
-                <input type="text" id="email" name="lastname" placeholder="name@example.com">
+                <input type="text" id="email" name="email" placeholder="name@example.com">
             
                 <label for="subject">Message (Optional)</label>
                 <textarea id="subject" name="subject" placeholder="Send me a message." style="height:200px"></textarea>
