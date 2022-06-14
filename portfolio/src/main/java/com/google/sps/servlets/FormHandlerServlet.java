@@ -6,25 +6,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
+
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    // Get the value entered in the form.
+    // form-infor.
     String name = request.getParameter("firstname");
-    String lastname = request.getParameter("lastaname");
+    String lastname = request.getParameter("lastname");
     String email = request.getParameter("email");
     String message = request.getParameter("subject");
 
-    // Print the value so you can see it in the server logs.
-    System.out.println("Name of the person: " + name);
-    System.out.println("Last name of the person: " + lastname);
-    System.out.println("Email of the person: " + email);
-    System.out.println("Message from the person: " + message);
-
-    // Write the value to the response so the user can see it.
-    response.getWriter().println("Thanks for contacting me. I will get back to you soon.");
+    // Store the infor
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("ContactInformation");
+    FullEntity taskEntity = 
+                            Entity.newBuilder(keyFactory.newKey())
+                            .set("Name", name)
+                            .set("Lastname", lastname)
+                            .set("Email", email)
+                            .set("Message", message)
+                            .build();
+    datastore.put(taskEntity);
   }
 }
