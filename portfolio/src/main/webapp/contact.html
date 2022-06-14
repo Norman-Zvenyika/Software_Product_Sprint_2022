@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>normanzvenyika.com</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="navbar">
+                <div><a href="index.html" class="">Home</a></div>
+                <div><a href="about.html" class="">About</a></div>
+                <div><a href="projects.html" class="">Projects</a></div>
+                <div><a href="contact.html" class="">Contact</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <form action="/form-handler" method="POST" enctype="multipart/form-data">
+                <label for="fname">First Name<span class="required">*</span></label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Last Name<span class="required">*</span></label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="text" id="email" name="email" placeholder="name@example.com">
+            
+                <label for="subject">Message (Optional)</label>
+                <textarea id="subject" name="subject" placeholder="Send me a message." style="height:200px"></textarea>
+                
+                <label for="image">Media (Optional)</label>
+                <input type="file" name="image"><br>                
+                
+                <input type="submit" value="Submit">
+                <p>
+                    <span class="required">*</span>Required field
+                </p>
+            </form>
+        </div>
+        <div class="footer">
+            <div>
+                <div>Connect with me!</div>
+                <div>
+                    <a href="https://www.linkedin.com/in/norman-zvenyika"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/norman-zvenyika"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
