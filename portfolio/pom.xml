@@ -34,6 +34,13 @@
       <version>2.9.0</version>
     </dependency>
 
+    <!-- Cloud Translation -->
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-translate</artifactId>
+        <version>1.70.0</version>
+    </dependency>
+    
     <!-- DataStore -->
     <dependency>
         <groupId>com.google.cloud</groupId>
