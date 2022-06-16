@@ -17,7 +17,7 @@ public class FormHandlerServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+    
     // form-infor.
     String name = request.getParameter("firstname");
     String lastname = request.getParameter("lastname");
