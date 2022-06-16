@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    margin: 0;
+}
+
+.navbar>div,
+a {
+    padding: 5px;
+    text-decoration: none;
+    color: #f2f2f2
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}

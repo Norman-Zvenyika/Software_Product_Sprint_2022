@@ -1,0 +1,32 @@
+body {
+    padding: 6px;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.headingColor1 {
+    color: black;
+}
+
+.headingColor2 {
+    color: #1E90FF;
+}
+
+p {
+    color: black;
+}
+
+q {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
