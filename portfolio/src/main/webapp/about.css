@@ -1,0 +1,98 @@
+@import "generalBody.css";
+@import "header.css";
+@import "navBar.css";
+@import "footer.css";
+
+.grid-container {
+    grid-template-rows: 0.5fr 7fr 0.5fr;
+    grid-template-areas:
+        "header header  header  header  header  header  header  header"
+        "main   main    main    main    main    main    main    main"
+        "footer footer  footer  footer  footer  footer  footer  footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    gap: 5px;
+    background-color: f2f2f2;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 500px;
+    text-align: center;
+    font-family: arial;
+}
+
+.contacts {
+    margin: 24px 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+.figure figcaption {
+    color: grey;
+    font-size: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #1E90FF;
+}
+
+.card li {
+    list-style: none;
+    text-align: start;
+    font-family: aria;
+    font-size: 20px;
+    tab-size: 2;
+}
+
+
+.footer {
+    grid-area: footer;
+}
+
+
+/* Smartphone and Display*/
+@media screen and (max-width:726px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 0.4fr 7fr 0.4fr;
+        grid-template-areas:
+            "header header  header  header  header  header  header  header"
+            "main   main    main    main    main    main    main    main"
+            "footer footer  footer  footer  footer  footer  footer  footer";
+        grid-gap: 5px;
+        min-height: 100vh;
+        background-color: #f2f2f2;
+    }
+
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card li {
+        list-style: none;
+        text-align: start;
+        font-family: aria;
+        font-size: 13px;
+        tab-size: 2;
+        font-weight: bold;
+    }
+
+    .card {
+        width: 315px;
+    }
+}
